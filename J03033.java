@@ -1,21 +1,29 @@
 import java.util.*;
+import java.math.*;
+import java.lang.*;
 public class J03033 {
-public static long GCD (long a, long b){
-        if(a==0){
-            return b;
-        }
-            return GCD(b%a, a);
+    public static BigInteger lcm(String a, String b)
+    {
+        BigInteger s = new BigInteger(a);
+        BigInteger s1 = new BigInteger(b);
+ 
+        BigInteger mul = s.multiply(s1);
+        BigInteger gcd = s.gcd(s1);
+        BigInteger lcm = mul.divide(gcd);
+        return lcm;
     }
-    public static long LCM (long a, long b){
-        return (a / GCD(a,b) ) * b;
-    }
-    public static void main(String[] args){
+
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
+
         int t = sc.nextInt();
-        while(t-- >0){
-            long a = sc.nextLong();
-            long b = sc.nextLong();
-            System.out.println(LCM(a,b));
+        while(t--> 0){
+
+        String a = sc.next();
+        String b = sc.next();
+
+        System.out.println(lcm(a, b));
         }
     }
 }
