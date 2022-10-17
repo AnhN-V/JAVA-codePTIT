@@ -4,17 +4,17 @@ import java.util.Scanner;
  public class J02007{ 
       
      public static void main(String[] args) { 
-         Scanner inp = new Scanner(System.in); 
-         int t = inp.nextInt(); 
+         Scanner sc = new Scanner(System.in); 
+         int t = sc.nextInt(); 
          for (int j = 1; j <= t; j++){ 
-             int n = inp.nextInt(); 
+             int n = sc.nextInt(); 
              int[] a = new int[10001]; 
              int[] cnt = new int[10001]; 
               
              for (int i = 0; i < n; i++){ 
-                 a[i] = inp.nextInt(); 
+                 a[i] = sc.nextInt(); 
                  cnt[a[i]]++; 
-             } 
+             }
               
              System.out.println("Test " + j + ":"); 
              for (int i = 0; i < n; i++){ 
