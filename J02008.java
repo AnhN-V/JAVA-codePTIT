@@ -7,7 +7,7 @@ public class J02008 {
         return GCD(b%a,a);
     }
     public static long LCM(long a, long b){
-        return (a / GCD(a,b)) * b;
+        return a * b / GCD(a,b) ;
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
